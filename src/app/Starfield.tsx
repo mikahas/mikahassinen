@@ -11,7 +11,7 @@ const TWINKLE_STARS = 20;
 // Nebula hues — muted enough to feel like a hint of colour, not neon
 const NEBULA_COLORS = [
   "#c084fc", // purple
-  "#f472b6", // pink
+  "#fb923c", // amber-orange
   "#4ade80", // green
   "#67e8f9", // cyan-blue
 ] as const;

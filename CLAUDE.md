@@ -5,13 +5,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Commands
 
 ```bash
-npm run dev      # Start development server
-npm run build    # Build for production
-npm start        # Run production build
-npm run lint     # Run ESLint
+npm run dev          # Start development server
+npm run build        # Build for production
+npm start            # Run production build
+npm run lint         # Run ESLint
+npm test             # Run tests (Vitest)
+npm run test:w       # Run tests in watch mode
 ```
-
-No test framework is configured.
 
 ## Architecture
 

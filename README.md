@@ -1,4 +1,4 @@
-# mikahassinen.com
+# mikahassinen
 
 Personal portfolio site for Mika Hassinen — Developer. Trekkie. Enthusiast of nebulae with coffee.
 
@@ -18,4 +18,6 @@ npm run dev      # Start development server (http://localhost:3000)
 npm run build    # Build for production
 npm start        # Run production build
 npm run lint     # Run ESLint
+npm test         # Run tests (Vitest)
+npm run test:w   # Run tests in watch mode
 ```

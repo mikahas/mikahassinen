@@ -9,7 +9,7 @@
     "lint": "eslint",
     "generate:openapi": "node scripts/generate-openapi.mjs",
     "test": "vitest run",
-    "test:watch": "vitest",
+    "test:w": "vitest",
     "prepare": "simple-git-hooks"
   },
   "simple-git-hooks": {

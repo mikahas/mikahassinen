@@ -23,9 +23,15 @@ $stars-lg-b: make-stars(15);
 // ── Starfield ─────────────────────────────────────────────────
 .starfield {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 2560px;
+  height: 1440px;
   z-index: 0;
   pointer-events: none;
+  transform-origin: top left;
+  opacity: 0;
+  transition: opacity 1s ease;
 }
 
 .starsSmall,

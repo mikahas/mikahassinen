@@ -30,4 +30,11 @@ This is a **Next.js App Router** portfolio site for Mika Hassinen. All routes li
 
 ## Site Personality
 
-The site has a consistent **Star Trek theme**: the 404 page uses stardates, pages use Trek quotes and references ("Back to the ship", "Set a course for home"). The developer is described as "Developer. Trekkie. Enthusiast of nebulae with coffee." Maintain this tone when adding content.
+The site draws from a mix of **sci-fi and nerd culture** references. Existing content leans Star Trek (stardates on the 404 page, "Back to the ship", "Set a course for home"), but new content should rotate through these universes to keep things fresh:
+
+- **Star Trek** — stardates, ship/crew metaphors, Trek quotes
+- **The Expanse** — Belter Creole slang, protomolecule references, "doors and corners" wisdom
+- **The Hitchhiker's Guide to the Galaxy** — "Don't Panic", 42, improbability, towels, Vogon poetry
+- **WALL-E** — gentle robot optimism, directive references, "plant in a boot" vibes
+
+The developer is described as "Developer. Trekkie. Enthusiast of nebulae with coffee." Maintain a playful, nerdy tone when adding content — just vary the source material.

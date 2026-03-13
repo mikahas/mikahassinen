@@ -11,6 +11,7 @@ try {
 const nextConfig: NextConfig = {
   env: {
     NEXT_PUBLIC_COMMIT_HASH: commitHash,
+    NEXT_PUBLIC_SITE_URL: "https://mikahassinen.net",
   },
 };
 

@@ -17,7 +17,7 @@ Disallow: /definitely-not-the-password
 
 # "Resistance is futile." — The Borg, probably also about SEO crawlers
 
-Sitemap: https://mikahassinen.com/sitemap.xml
+Sitemap: ${process.env.NEXT_PUBLIC_SITE_URL}/sitemap.xml
 `;
 
   return new Response(content, {

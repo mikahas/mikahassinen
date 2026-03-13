@@ -1,0 +1,105 @@
+@use 'sass:math';
+
+// ── Star generation ───────────────────────────────────────────
+@function make-stars($count, $max-x: 2560, $max-y: 1440) {
+  $shadows: '#{math.random($max-x)}px #{math.random($max-y)}px #fff';
+  @for $i from 2 through $count {
+    $shadows: '#{$shadows}, #{math.random($max-x)}px #{math.random($max-y)}px #fff';
+  }
+  @return unquote($shadows);
+}
+
+$stars-sm: make-stars(500);
+$stars-md: make-stars(120);
+$stars-lg-a: make-stars(20);
+$stars-lg-b: make-stars(15);
+
+// ── Keyframes ─────────────────────────────────────────────────
+@keyframes twinkle {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.2; }
+}
+
+// ── Starfield ─────────────────────────────────────────────────
+.starfield {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.starsSmall,
+.starsMedium,
+.starsLargeA,
+.starsLargeB {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: transparent;
+}
+
+.starsSmall {
+  width: 1px;
+  height: 1px;
+  box-shadow: $stars-sm;
+  opacity: 0.5;
+}
+
+.starsMedium {
+  width: 1px;
+  height: 1px;
+  box-shadow: $stars-md;
+  opacity: 0.85;
+}
+
+.starsLargeA {
+  width: 2px;
+  height: 2px;
+  box-shadow: $stars-lg-a;
+  animation: twinkle 4.2s ease-in-out infinite;
+}
+
+.starsLargeB {
+  width: 2px;
+  height: 2px;
+  box-shadow: $stars-lg-b;
+  animation: twinkle 3.6s ease-in-out infinite;
+  animation-delay: -1.8s;
+}
+
+// ── Layout ────────────────────────────────────────────────────
+.main {
+  position: relative;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// ── Hero ──────────────────────────────────────────────────────
+.hero {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 8vw, 6rem);
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  color: var(--color-text);
+  line-height: 1.1;
+}
+
+.tagline {
+  font-family: var(--font-sans);
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  color: var(--color-text-muted);
+  letter-spacing: 0.06em;
+}

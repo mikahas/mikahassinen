@@ -1,0 +1,55 @@
+// ── Variables ─────────────────────────────────────────────
+:root {
+  --color-bg: #0a0a0a;
+  --color-bg-surface: #111111;
+  --color-text: #e8e8e8;
+  --color-text-muted: #888888;
+  --color-accent: #7eb8f7;
+  --color-accent-warm: #f7c97e;
+  --color-danger: #f77e7e;
+
+  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), 'Courier New', monospace;
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 8rem;
+}
+
+// ── Reset ──────────────────────────────────────────────────
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  min-height: 100dvh;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+code,
+pre {
+  font-family: var(--font-mono);
+}

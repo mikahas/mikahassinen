@@ -1,0 +1,61 @@
+.container {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md);
+  text-align: center;
+  gap: var(--space-sm);
+}
+
+.code {
+  font-family: var(--font-mono);
+  font-size: clamp(5rem, 20vw, 10rem);
+  font-weight: 700;
+  color: var(--color-accent-warm);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.teapot {
+  font-size: clamp(3rem, 10vw, 5rem);
+  line-height: 1;
+  user-select: none;
+}
+
+.title {
+  font-size: clamp(1.2rem, 4vw, 1.8rem);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.quote {
+  font-size: clamp(1rem, 3vw, 1.3rem);
+  color: var(--color-accent-warm);
+  font-style: italic;
+  max-width: 36ch;
+}
+
+.attribution {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  max-width: 44ch;
+}
+
+.back {
+  margin-top: var(--space-md);
+  font-size: 0.9rem;
+  color: var(--color-accent);
+
+  &:hover {
+    color: var(--color-accent-warm);
+  }
+}

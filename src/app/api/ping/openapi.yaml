@@ -1,0 +1,16 @@
+get:
+  summary: Health check
+  operationId: getPing
+  tags:
+    - Essential Services
+  responses:
+    "200":
+      description: pong
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+                example: pong

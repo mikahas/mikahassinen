@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "node scripts/generate-openapi.mjs && next dev",
+    "build": "node scripts/generate-openapi.mjs && next build",
     "start": "next start",
     "lint": "eslint",
+    "generate:openapi": "node scripts/generate-openapi.mjs",
     "test": "vitest run",
     "test:watch": "vitest",
     "prepare": "simple-git-hooks"
@@ -25,12 +26,14 @@
     "sass": "^1.98.0"
   },
   "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@vitejs/plugin-react": "^6.0.1",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
+    "js-yaml": "^4.1.1",
     "lint-staged": "^16.3.3",
     "simple-git-hooks": "^2.13.1",
     "typescript": "^5",

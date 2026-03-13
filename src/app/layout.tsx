@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Orbitron } from "next/font/google";
 import "./globals.scss";
 import Footer from "./components/Footer";
+import ConsoleGreeting from "./components/ConsoleGreeting";
+import ThemeProvider from "./components/ThemeProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,10 +32,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} ${orbitron.variable}`}>
-        {children}
-        <Footer />
+        {/* Blocking script — sets data-theme before first paint to prevent flash */}
+        <script dangerouslySetInnerHTML={{ __html: `(function(){try{var t=localStorage.getItem('theme');var p=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t||p);}catch(e){}})();` }} />
+        <ThemeProvider>
+          {children}
+          <Footer />
+          <ConsoleGreeting />
+        </ThemeProvider>
       </body>
     </html>
   );

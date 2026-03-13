@@ -75,7 +75,7 @@ export default function Starfield() {
   }, []);
 
   return (
-    <div ref={ref} className={styles.starfield} aria-hidden="true">
+    <div ref={ref} className={styles.starfield} data-starfield aria-hidden="true">
       <div className={styles.starsSmall} />
       <div className={styles.starsMedium} />
       <div className={styles.starsLargeA} />

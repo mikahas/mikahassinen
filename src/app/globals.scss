@@ -54,3 +54,30 @@ code,
 pre {
   font-family: var(--font-mono);
 }
+
+// ── Light theme ────────────────────────────────────────────
+[data-theme="light"] {
+  --color-bg: #f4f2f8;
+  --color-bg-surface: #eceaf2;
+  --color-text: #1a1a1a;
+  --color-text-muted: #5a5a5a;
+  --color-accent: #2563eb;
+  --color-accent-warm: #c2790a;
+  --color-danger: #dc2626;
+
+  body {
+    // Light nebula — same hues as the dark starfield, washed out on pale ground
+    background:
+      radial-gradient(ellipse 55% 40% at 12% 18%,  rgba(192, 132, 252, 0.28) 0%, transparent 70%),
+      radial-gradient(ellipse 45% 55% at 80% 65%,  rgba(244, 114, 182, 0.22) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 35% at 60% 10%,  rgba(103, 232, 249, 0.20) 0%, transparent 70%),
+      radial-gradient(ellipse 38% 45% at 25% 80%,  rgba(74,  222, 128, 0.16) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 50% at 90% 20%,  rgba(192, 132, 252, 0.14) 0%, transparent 70%),
+      var(--color-bg);
+  }
+
+  // Hide the starfield — it only works against black
+  [data-starfield] {
+    display: none;
+  }
+}

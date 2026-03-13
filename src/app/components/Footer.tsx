@@ -1,4 +1,5 @@
 import styles from "./Footer.module.scss";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Footer() {
   const hash = process.env.NEXT_PUBLIC_COMMIT_HASH ?? "unknown";
@@ -24,6 +25,7 @@ export default function Footer() {
           gh
         </a>
       </nav>
+      <ThemeToggle />
       <span className={styles.build} aria-label={`Build ${hash}`}>
         build {hash}
       </span>

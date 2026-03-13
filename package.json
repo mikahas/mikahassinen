@@ -8,7 +8,14 @@
     "start": "next start",
     "lint": "eslint",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "prepare": "simple-git-hooks"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": "eslint --fix"
   },
   "dependencies": {
     "@scalar/api-reference-react": "^0.9.8",
@@ -24,6 +31,8 @@
     "@vitejs/plugin-react": "^6.0.1",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
+    "lint-staged": "^16.3.3",
+    "simple-git-hooks": "^2.13.1",
     "typescript": "^5",
     "vitest": "^4.1.0"
   }

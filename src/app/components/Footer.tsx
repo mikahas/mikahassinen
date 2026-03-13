@@ -1,34 +1,27 @@
 import styles from "./Footer.module.scss";
-import ThemeToggle from "./ThemeToggle";
 
 export default function Footer() {
   const hash = process.env.NEXT_PUBLIC_COMMIT_HASH ?? "unknown";
+  const repo = process.env.NEXT_PUBLIC_GITHUB_REPO ?? "";
+  const href = repo && hash !== "unknown" ? `${repo}/commit/${hash}` : undefined;
 
   return (
     <footer className={styles.footer}>
-      <nav className={styles.links} aria-label="Social links">
+      {href ? (
         <a
-          href="https://linkedin.com/in/mikahassinen"
+          href={href}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="LinkedIn"
+          className={styles.build}
+          aria-label={`View commit ${hash} on GitHub`}
         >
-          in
+          build {hash}
         </a>
-        <span className={styles.dot} aria-hidden="true">·</span>
-        <a
-          href="https://github.com/mikahas"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="GitHub"
-        >
-          gh
-        </a>
-      </nav>
-      <ThemeToggle />
-      <span className={styles.build} aria-label={`Build ${hash}`}>
-        build {hash}
-      </span>
+      ) : (
+        <span className={styles.build} aria-label={`Build ${hash}`}>
+          build {hash}
+        </span>
+      )}
     </footer>
   );
 }

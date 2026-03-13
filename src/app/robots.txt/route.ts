@@ -9,7 +9,6 @@ Allow: /
 
 # These routes are traps. You were warned.
 Disallow: /admin
-Disallow: /free-bitcoin
 Disallow: /definitely-not-the-password
 
 # The /teapot endpoint will return HTTP 418.

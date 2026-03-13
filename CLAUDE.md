@@ -20,7 +20,7 @@ This is a **Next.js App Router** portfolio site for Mika Hassinen. All routes li
 **Route structure:**
 - `/` — Home page (under construction placeholder)
 - `/teapot` — HTTP 418 themed page with RFC 2324 explanation
-- `/admin`, `/free-bitcoin` — Rickroll Easter eggs (client-side redirects)
+- `/admin` — Rickroll Easter egg (client-side redirect)
 - `/api/teapot` — JSON API returning 418 status
 - `/robots.txt` — Dynamic robots.txt with witty commentary
 

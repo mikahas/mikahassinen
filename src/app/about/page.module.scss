@@ -1,0 +1,89 @@
+// ── Layout ────────────────────────────────────────────────
+.page {
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  padding: var(--space-lg) var(--space-md);
+}
+
+.article {
+  max-width: 38rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+// ── Photo ─────────────────────────────────────────────────
+.photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--color-text-muted);
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+// ── Prose ─────────────────────────────────────────────────
+.prose {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  font-size: clamp(0.95rem, 2.2vw, 1.1rem);
+  line-height: 1.7;
+  color: var(--color-text);
+
+  p {
+    margin: 0;
+  }
+}
+
+.introQuotes {
+  margin: 0;
+  padding-left: 1.5rem;
+  border-left: 2px solid var(--color-accent-warm);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+
+  p {
+    font-style: italic;
+    color: var(--color-accent-warm);
+    font-size: 1.05em;
+  }
+}
+
+.divider {
+  width: 3rem;
+  height: 1px;
+  background: var(--color-text-muted);
+  opacity: 0.3;
+  align-self: center;
+  margin: var(--space-sm) 0;
+}
+
+.highlight {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.closer {
+  font-style: italic;
+  color: var(--color-text-muted);
+}
+
+// ── Back link ─────────────────────────────────────────────
+.back {
+  font-size: 0.9rem;
+  color: var(--color-accent);
+
+  &:hover {
+    color: var(--color-accent-warm);
+  }
+}

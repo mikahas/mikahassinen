@@ -113,6 +113,7 @@ export default function BurgerMenu() {
         <nav aria-label="Main">
           <ul className={styles.navList}>
             <li><Link href="/" onClick={close}>Home</Link></li>
+            <li><Link href="/about" onClick={close}>About</Link></li>
             <li><Link href="/api-docs" onClick={close}>API Docs</Link></li>
             <li><Link href="/teapot" onClick={close}>I&apos;m a Teapot</Link></li>
           </ul>

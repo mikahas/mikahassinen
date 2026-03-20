@@ -28,6 +28,12 @@ This is a **Next.js App Router** portfolio site for Mika Hassinen. All routes li
 
 **Path alias:** `@/*` maps to `./src/*`.
 
+## Testing Policy
+
+Every new feature or route **must** include tests. Place test files next to the source file using the `.test.ts` / `.test.tsx` naming convention.
+
+A **pre-commit hook** runs both ESLint and the full test suite (`vitest run`) automatically. Commits will be blocked if any test fails, so make sure tests pass locally before committing.
+
 ## Site Personality
 
 The site draws from a mix of **sci-fi and nerd culture** references. Existing content leans Star Trek (stardates on the 404 page, "Back to the ship", "Set a course for home"), but new content should rotate through these universes to keep things fresh:

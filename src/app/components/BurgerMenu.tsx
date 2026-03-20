@@ -116,6 +116,7 @@ export default function BurgerMenu() {
             <li><Link href="/about" onClick={close}>About</Link></li>
             <li><Link href="/api-docs" onClick={close}>API Docs</Link></li>
             <li><Link href="/teapot" onClick={close}>I&apos;m a Teapot</Link></li>
+            <li><Link href="/tidbit" onClick={close}>Daily Tidbit</Link></li>
           </ul>
         </nav>
 

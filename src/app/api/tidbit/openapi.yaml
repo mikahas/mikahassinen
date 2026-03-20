@@ -1,0 +1,52 @@
+get:
+  summary: Daily tidbit
+  description: >
+    Returns a fun fact, aphorism, or interesting piece of information.
+    Without a date parameter it returns today's tidbit.
+    The same date always returns the same tidbit.
+  operationId: getTidbit
+  tags:
+    - Essential Services
+  parameters:
+    - name: date
+      in: query
+      required: false
+      description: >
+        Day to retrieve. Accepts MM-DD (e.g. 03-14) or YYYY-MM-DD (e.g. 2026-03-14).
+        Omit for today's tidbit.
+      schema:
+        type: string
+        examples:
+          - "03-14"
+          - "2026-07-20"
+  responses:
+    "200":
+      description: A tidbit for the requested day
+      content:
+        application/json:
+          schema:
+            type: object
+            required: [date, text]
+            properties:
+              date:
+                type: string
+                description: The MM-DD key for this tidbit
+                example: "03-14"
+              text:
+                type: string
+                description: The tidbit text
+                example: "Pi Day. The answer you're looking for is not 3.14159 — it's 42."
+              source:
+                type: string
+                description: Optional attribution
+                example: "Douglas Adams (approximately)"
+    "400":
+      description: Invalid date format
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+                example: "Invalid date. Use MM-DD or YYYY-MM-DD format."
